@@ -97,7 +97,7 @@ fr-CH:
       month: Mois
       second: Seconde
       year: Année
-  errors: &errors
+  errors:
     format: '%{attribute} %{message}'
     messages:
       accepted: doit être accepté(e)
@@ -194,14 +194,7 @@ fr-CH:
   time:
     am: am
     formats:
-      default: ! '%d. %B %Y %H:%M'
-      long: ! '%A, %d. %B %Y %H:%M:%S %Z'
-      short: ! '%d. %b %H:%M'
+      default: ! '%d. %B %Y %H h %M'
+      long: ! '%A, %d %B %Y %H h %M min %S s %Z'
+      short: ! '%d %b %H h %M'
     pm: pm
-  # remove these aliases after 'activemodel' and 'activerecord' namespaces are removed from Rails repository
-  activemodel:
-    errors:
-      <<: *errors
-  activerecord:
-    errors:
-      <<: *errors

@@ -12,7 +12,7 @@ nl:
     -
     - jan
     - feb
-    - mar
+    - mrt
     - apr
     - mei
     - jun
@@ -95,13 +95,13 @@ nl:
       month: maand
       second: seconde
       year: jaar
-  errors: &errors
+  errors:
     format: ! '%{attribute} %{message}'
     messages:
       accepted: moet worden geaccepteerd
       blank: moet opgegeven zijn
       present: moet leeg zijn
-      confirmation: komt niet met de bevestiging overeen
+      confirmation: ! "komt niet overeen met %{attribute}"
       empty: moet opgegeven zijn
       equal_to: moet gelijk zijn aan %{count}
       even: moet even zijn
@@ -202,10 +202,3 @@ nl:
       long: ! '%d %B %Y %H:%M'
       short: ! '%d %b %H:%M'
     pm: ! '''s middags'
-  # remove these aliases after 'activemodel' and 'activerecord' namespaces are removed from Rails repository
-  activemodel:
-    errors:
-      <<: *errors
-  activerecord:
-    errors:
-      <<: *errors

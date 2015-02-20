@@ -95,7 +95,7 @@ sv:
       month: Månad
       second: Sekund
       year: År
-  errors: &errors
+  errors:
     format: ! '%{attribute} %{message}'
     messages:
       accepted: måste vara accepterad
@@ -115,7 +115,7 @@ sv:
       not_an_integer: måste vara ett heltal
       odd: måste vara udda
       record_invalid: ! 'Ett fel uppstod: %{errors}'
-      taken: har redan tagits
+      taken: används redan
       too_long: är för lång (maximum är %{count} tecken)
       too_short: är för kort (minimum är %{count} tecken)
       wrong_length: har fel längd (ska vara %{count} tecken)
@@ -134,7 +134,7 @@ sv:
   number:
     currency:
       format:
-        delimiter:
+        delimiter: ''
         format: ! '%n %u'
         precision: 2
         separator: ! ','
@@ -142,7 +142,7 @@ sv:
         strip_insignificant_zeros: false
         unit: kr
     format:
-      delimiter:  
+      delimiter: ''
       precision: 2
       separator: ! ','
       significant: false
@@ -190,10 +190,3 @@ sv:
       long: ! '%e %B %Y %H:%M'
       short: ! '%e %b %H:%M'
     pm: ''
-  # remove these aliases after 'activemodel' and 'activerecord' namespaces are removed from Rails repository
-  activemodel:
-    errors:
-      <<: *errors
-  activerecord:
-    errors:
-      <<: *errors

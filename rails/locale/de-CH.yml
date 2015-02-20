@@ -95,12 +95,13 @@ de-CH:
       month: Monat
       second: Sekunden
       year: Jahr
-  errors: &errors
+  errors:
     format: ! '%{attribute} %{message}'
     messages:
       accepted: muss akzeptiert werden
       blank: muss ausgefüllt werden
-      confirmation: stimmt nicht mit der Bestätigung überein
+      present: darf nicht ausgefüllt werden
+      confirmation: stimmt nicht mit %{attribute} überein
       empty: muss ausgefüllt werden
       equal_to: muss genau %{count} sein
       even: muss gerade sein
@@ -116,12 +117,13 @@ de-CH:
       odd: muss ungerade sein
       record_invalid: ! 'Gültigkeitsprüfung ist fehlgeschlagen: %{errors}'
       restrict_dependent_destroy:
-        one: S lösche hät nöd funktioniert wills no en anhängige %{record} git
-        many: S lösche hät nöd funktioniert wills no anhängigi %{record} git
+        one: ! 'Datensatz kann nicht gelöscht werden, da ein abhängiger %{record}-Datensatz existiert.'
+        many: ! 'Datensatz kann nicht gelöscht werden, da abhängige %{record} existieren.'
       taken: ist bereits vergeben
       too_long: ist zu lang (nicht mehr als %{count} Zeichen)
       too_short: ist zu kurz (nicht weniger als %{count} Zeichen)
       wrong_length: hat die falsche Länge (muss genau %{count} Zeichen haben)
+      other_than: darf nicht gleich %{count} sein
     template:
       body: ! 'Bitte überprüfen Sie die folgenden Felder:'
       header:
@@ -186,6 +188,7 @@ de-CH:
     percentage:
       format:
         delimiter: ''
+        format: "%n%"
     precision:
       format:
         delimiter: ''
@@ -201,10 +204,3 @@ de-CH:
       long: ! '%A, %d. %B %Y, %H:%M Uhr'
       short: ! '%d. %B, %H:%M Uhr'
     pm: nachmittags
-  # remove these aliases after 'activemodel' and 'activerecord' namespaces are removed from Rails repository
-  activemodel:
-    errors:
-      <<: *errors
-  activerecord:
-    errors:
-      <<: *errors

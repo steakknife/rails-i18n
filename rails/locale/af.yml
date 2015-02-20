@@ -98,7 +98,7 @@ af:
       month: Maand
       second: Sekondes
       year: Jaar
-  errors: &errors
+  errors:
     format: ! '%{attribute} %{message}'
     messages:
       accepted: moet aanvaar word
@@ -149,7 +149,7 @@ af:
         separator: .
         significant: vals
         strip_insignificant_zeros: vals
-        unit: $
+        unit: R
     format:
       delimiter: ! ','
       precision: 3
@@ -199,10 +199,3 @@ af:
       long: ! '%B %d, %Y %H:%M'
       short: ! '%d %b %H:%M'
     pm: nm
-  # remove these aliases after 'activemodel' and 'activerecord' namespaces are removed from Rails repository
-  activemodel:
-    errors:
-      <<: *errors
-  activerecord:
-    errors:
-      <<: *errors

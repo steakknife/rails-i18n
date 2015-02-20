@@ -95,12 +95,12 @@ en-GB:
       month: Month
       second: Seconds
       year: Year
-  errors: &errors
+  errors:
     format: ! '%{attribute} %{message}'
     messages:
       accepted: must be accepted
       blank: can't be blank
-      confirmation: doesn't match confirmation
+      confirmation: ! "doesn't match %{attribute}"
       empty: can't be empty
       equal_to: must be equal to %{count}
       even: must be even
@@ -196,10 +196,3 @@ en-GB:
       long: ! '%d %B, %Y %H:%M'
       short: ! '%d %b %H:%M'
     pm: pm
-  # remove these aliases after 'activemodel' and 'activerecord' namespaces are removed from Rails repository
-  activemodel:
-    errors:
-      <<: *errors
-  activerecord:
-    errors:
-      <<: *errors
